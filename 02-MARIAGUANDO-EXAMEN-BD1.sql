@@ -1,0 +1,51 @@
+CREATE DATABASE  dbConferenceVG;
+
+USE dbConferenceVG;
+
+CREATE TABLE PARTICIPANTE; 
+(
+IDPAR INT PK,
+FECREGPAR DATE, 
+NOMPAR varchar(60),
+APEPAR varchar(80),
+DNIPAR char(8),
+TIPPAR char(1),
+CELPAR char(9),
+EMAPAR varchar(90),
+DIRPAR varchar(90),
+ESTPAR char(1),
+)
+ CREATE TABLE PONENTE
+ (
+ CODPON char(5) PK
+ NOMPOM varchar(60)
+ APEPON varchar(80)
+ CELPON char(9)
+ DNIPON char(8)
+EMAPON varchar(90)
+DIRPON varchar(90)}
+)
+  
+CREATE TABLE CONFERENCIA
+(
+CODCONF char(5) PK
+TEMCONF varchar (90)
+FECCONF date
+PONCONF char(5)
+)
+
+CREATE TABLE REGISTRO
+(
+CODREG char(5) PK
+CODPAR int 
+FECREG date
+CERTREG char(1)
+)
+
+CREATE TABLE REGISTRODETALLE
+(
+IDREGDET int PK
+CODREG char(5)
+CODCONF char(5)
+CANTPART int 
+)
